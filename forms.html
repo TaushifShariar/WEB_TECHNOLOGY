@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     
+    .container{
+       
+       display: flex;
+       flex-direction: column;       
+       width: max-content; 
+       background-color: brown;
+       padding: 10px;
+       
+
+       
+    }
+    .box_1{
+        font-size: 20px;
+        position: relative;
+       
+        background-color: purple;
+        width: 400px;
+        height: max-content;
+        z-index: 2;
+        
+
+    }
+ .box_2{
+    
+font-size: 20px;
+    background-color: chartreuse;
+    position: relative;
+    align-content:baseline;
+    width: 400px;
+text-align: left;
+    height: max-content;
+    z-index: 1;
+   
+    
+ }
+ #submit{
+    
+    color: blue;
+ }
+ 
+
+    </style>
+</head>
+<body style="background-color: bisque; ">
+    
+   <h1 style="text-align: center;">REGISTRATION FORM</h1>
+    
+  <div class="container">
+    <form id="regform">
+<div class="box_1">
+    <label for="Name" style="color: bisque;">Full Name:   </label><br>
+    <input type="text" id="Name" placeholder="Enter full name" name="Full Name"><br>
+    <b id="output" style=" color:rgb(9, 6, 57) ; font-size: 15px;"></b><br><br>
+   <label for="pasword" style="color: bisque;">Enter password  </label> <br>
+    <input type="text" id="password" placeholder="Enter password" name="password" minlength="8" maxlength="16" ><br>
+    <b id="pass" style=" color:rgb(9, 6, 57) ; font-size: 15px;"></b><br><br>
+    <label for="repeat" style="color: bisque;">Retype password  </label><br>
+    <input type="text" id="repeat" placeholder="Repeat password" name="Password"><br>
+    <b id="repass" style=" color:rgb(9, 6, 57) ; font-size: 15px;"></b><br><br>
+    <label for="email" style="color: bisque;">Enter email   </label> <br>
+    <input type="email" id="email" placeholder="Enter email" name="email"><br>
+    <b id="outrage" style=" color:rgb(11, 5, 77) ; font-size: 15px;"></b><br><br>
+  
+    
+
+</div>
+    <div class="box_2">
+
+        <label for="DOB">Date of Birth:   </label><b id="outrage" style=" color:rgb(11, 5, 77) ; font-size: 15px;"></b> <br>
+        <input type="date" id="DOB" placeholder="Enter Date of Birth" name="Birthdate">
+        <b id="DB" style=" color:rgb(11, 5, 77) ; font-size: 15px;"></b><br>
+        <label for="country">Country:  </label> <b id="CT" style=" color:rgb(11, 5, 77) ; font-size: 15px;"></b><br>
+        <select name="country" id="country">
+            <option value="default" disabled selected>Select a country</option>
+            <option value="bangladesh">bangladesh</option>
+            <option value="india">india</option>
+            <option value="bhutan">bhutan</option>
+            <option value="china">china</option>
+        </select><br>
+        <label for>Gender:  </label><b id="GN" style=" color:rgb(11, 5, 77) ; font-size: 15px;"></b><br>
+        <input type="radio" id="male" name="gender" value="male" placeholder="male">
+        <label for="male">male</label><br>
+        <input type="radio" id="female" name="gender" value="female" placeholder="female">
+        <label for="female">Female </label><br>
+        <input type="submit" id="submit" name="submit" value="submit" onclick="return validate()" > 
+
+      
+      
+</div>
+</form>
+  </div>
+  
+ 
+</body>
+</html>
