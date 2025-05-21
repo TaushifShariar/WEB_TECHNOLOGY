@@ -51,7 +51,7 @@ font-size: 20px;
     line-height: 40px;
     width: 400px;
 text-align: left;
-    height: 150px;
+    height: 180px;
     z-index: 1;
     border-style: solid;
     border-color:navy;
@@ -94,7 +94,7 @@ text-align: left;
 
   <div class="container">
     
-    <form action="process.php" method="post" id="regform" >
+    <form action="process_div1.php" method="post" id="regform" >
 <div class="box_1">
     <label for="Name" style="color: bisque;">Full Name:   </label><br>
     <input type="text" id="Name" placeholder="Enter full name" name="Full Name"><br>
@@ -130,15 +130,23 @@ text-align: left;
         <label for="male">male</label><br>
         <input type="radio" id="female" name="gender" value="female" placeholder="female">
         <label for="female">Female </label><br>
-        <input type="submit" id="submit" name="submit" value="submit" onsubmit="return validate()" > 
-    </div>
+        <input type="submit" id="submit" name="submit" value="submit" onclick=" return validate()" > 
+    </form> 
+
+    
+    
+    
         <div class="box_2">
+            <form action="process_div2.php" method="post">
            <label for="uname">Username</label> 
       <input type="text" name="uname" id="uname"><br>
-      <label for="Pass">Password  </label> 
-      <input type="text" name="Password" id="Password"><br>
-      <button style="height: 30px; width: 60px; background-color: cornflowerblue; align-content: center;color: chocolate;">confirm</button>
-    
+      <label for="Pass">Password </label> 
+      <input type="text" name="password" id="password"><br>
+      <input type="color" id="color" name="color"><br>
+      
+    <button type="submit" name="submit" style= "height: 30px; color: wheat; text-align: center; background-color: rgb(49, 37, 174);"><b>LOG IN</b></button>
+    </div>
+    </form>
       <script>
 
             
@@ -286,12 +294,12 @@ text-align: left;
         //  {
         //     console.log("form is invalid");
         //  }
-
-        //   return isvalid;
+     
+          return isvalid;
     }
     </script>
 
-</form>
+
 </div>
 <div>
 <table  id="table">
@@ -302,9 +310,9 @@ text-align: left;
         <th>column2</th>
 
     
-</thead>
+</thead >
 <tbody id="td">
-    <tr>
+    <tr  >
         <td></td>
         <td></td>
     </tr>
@@ -337,8 +345,12 @@ text-align: left;
 
 </div>
 
-</div> 
+
+</div>
+    
+
 
 </body>
 </html> 
+
     

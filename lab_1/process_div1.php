@@ -7,23 +7,7 @@
 </head>
 <body>
 
-<!-- // if (isset($_POST['submit']))
-// {
-//     echo $_POST[''] . "<br>" ;
-//     echo $_POST['password'] ." <br>" ;
-//     echo $_POST['email']    ." <br>" ;
-//     echo $_POST['Birthdate']. " <br>" ;
-//     echo $_POST['country']  ."<br>" ;
-//     echo $_POST['gender']  ."<br> ";
-
-// }
-// else
-// {
-//     echo "no data to show";
-// }
-// 
-   -->
-   <div style = " text align: center; height: 60px; width: 50px" >
+  
 
 <div style = "background-color:green; height: max-content; width: max-content ">
 <h1 style = "color: cyan"><?php echo $_POST['Full_Name']; ?> </h1>
@@ -32,10 +16,13 @@
 <h1 style = "color: cyan"><?php echo $_POST['Birthdate']; ?> </h1>
 <h1 style = "color: cyan"><?php echo $_POST['country']; ?> </h1>
 <h1 style = "color: cyan"><?php echo $_POST['gender']; ?> </h1>
-<button type="button" style="background-color: chocolate;text-align: center;"><b>Confirm</b></button>
+<form action="lab_1.html" method="post">
+   <button type="submit" style="background-color: chocolate;text-align: center;"   ><b>Confirm</b></button>
+      <button type="submit" style="background-color: chocolate;text-align: center;"   ><b>Cancel</b></button>
 
+   </form>
 </div>
-</div>
+
 </body>
 </html>
 
