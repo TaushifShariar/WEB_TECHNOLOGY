@@ -31,13 +31,16 @@ $bgcolor = $_COOKIE['bgcolor'] ?? '#ffffff';
 echo "<body style='background-color: $bgcolor;'>";
 
 ?>
-
+ <?php include 'id.php' ?>
 </head>
 <body>
+  <form action="showaqi.php" method="post">
     <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+   
     <div class="container">
-    
+      
         <div class="side">
+         
     <label for="country"></label>
    <label><input type="checkbox" name="city[]" value="San Francisco"> San Francisco</label><br>
 <label><input type="checkbox" name="city[]" value="New York"> New York</label><br>
@@ -67,8 +70,8 @@ echo "<body style='background-color: $bgcolor;'>";
 
 
      </div>
-       <form action="showaqi.php" method="post">
-     <button type="submit" name="submit" onclick="return validation()" style=" font-size: 15px;color: wheat;  background-color: rgb(49, 37, 174)";>confirm</button> 
+      
+     <button type="submit" name="subm[]" onclick="return validation()" style=" font-size: 15px;color: wheat;  background-color: rgb(49, 37, 174)";>confirm</button> 
      <p id="p" style=" font-size: 15px; font-weight: bold;"></p>
      </form>
       </div>

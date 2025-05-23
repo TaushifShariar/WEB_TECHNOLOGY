@@ -85,8 +85,13 @@ text-align: left;
  }
     </style>
      <link rel="stylesheet" href="api1.css">
+
+     <?php include 'id.php' ?>
 </head>
 <body style="background-color: bisque; ">
+
+
+
     <div class="circle_container"><div class="circle"></div></div>
    <h1 style="text-align: center;">REGISTRATION FORM</h1>
    <div class="qw">
@@ -194,45 +199,33 @@ text-align: left;
             document.getElementById('outrage').innerHTML="✅";
           }
 
-          let pass=document.getElementById('password');
-          let alphaN= /\d/.test(pass.value);
+          let pass = document.getElementById('password');
+let repass = document.getElementById('repeat');
 
+let alphaN = /\d/.test(pass.value);
 
-          if(pass.value.trim()=="")
-          {
-            document.getElementById('pass').innerHTML= "*type password";
-            isvalid=false;
-          }
+if (pass.value.trim() === "") {
+  document.getElementById('pass').innerHTML = "*type password";
+  isvalid = false;
+} else if (!alphaN) {
+  document.getElementById('pass').innerHTML = "*at least one number";
+  isvalid = false;
+} else if (pass.value.length < 8 || pass.value.length > 16) {
+  document.getElementById('pass').innerHTML = "*password should be between 8 to 16 characters";
+  isvalid = false;
+} else {
+  document.getElementById('pass').innerHTML = "";
+}
 
-         else if(!alphaN)
-          {
-            document.getElementById('pass').innerHTML= "*atleast one number";
-            isvalid=false;
-          }
-         else if(pass.value.length < 8 || pass.value.length > 16)
-          {
-            document.getElementById('pass').innerHTML= "*pass should be between 8 to 16 characters";
-            isvalid=false;
-          }
-          
-          let repass=document.getElementById('repeat');
-         if(repass.value.trim()=="" && pass.value.trim()=="" )
-         {
-            document.getElementById('repass').innerHTML= "";
-            isvalid=false;
-         } 
-         
-        
-         else if(repass.value.trim()=="" && pass.value.trim()!="" )
-         {
-            document.getElementById('repass').innerHTML= "*retype password";
-            isvalid=false;
-         } 
-         else if(repass!=pass)
-         {
-            document.getElementById('repass').innerHTML= "*password not matched";
-            isvalid=false;
-         } 
+if (repass.value.trim() === "") {
+  document.getElementById('repass').innerHTML = "*retype password";
+  isvalid = false;
+} else if (repass.value !== pass.value) {
+  document.getElementById('repass').innerHTML = "*password not matched";
+  isvalid = false;
+} else {
+  document.getElementById('repass').innerHTML = "";
+}
 
          let DOB= document.getElementById('DOB');
          let birthdate= new Date(DOB.value);
@@ -271,11 +264,17 @@ text-align: left;
            
 
          let country= document.getElementById('country');
-         if(country.value="default")
+         if(country.value=="default")
          {
             document.getElementById('CT').innerHTML= "*select a country";
             isvalid=false;
          }
+
+         else
+         {
+            document.getElementById('CT').innerHTML= " ";
+         }
+        
 
          
          let gender= document.querySelector('input[name="gender"]:checked');
